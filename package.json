@@ -1,6 +1,6 @@
 {
-  "name": "npm-cli-login",
-  "version": "0.1.1",
+  "name": "@amindunited/npm-cli-login",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -11,7 +11,8 @@
     "url": "git+https://github.com/postmanlabs/npm-cli-login.git"
   },
   "scripts": {
-    "test": "./scripts/test.sh",
+    "tests_old": "./scripts/test.sh",
+    "test": "jshint && mocha tests",
     "snyk-protect": "snyk protect",
     "prepare": "npm run snyk-protect"
   },
@@ -24,7 +25,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "jscs": "^3.0.7",
+    "chai-as-promised": "^7.1.1",
     "jshint": "^2.9.1",
     "mocha": "^5.2.0"
   },
